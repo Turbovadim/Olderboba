@@ -1,0 +1,27 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+//        maven { url 'https://jitpack.io' }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/Qawaz/compose-code-editor")
+            credentials {
+                username = "Turbovadim"
+                password = "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"
+            }
+        }
+    }
+}
+rootProject.name = "Bisquit.Host"
+include ':app'
